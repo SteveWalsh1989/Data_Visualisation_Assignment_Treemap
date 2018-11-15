@@ -23,10 +23,18 @@ November 2018
 <div class="container">
     <div class="row">
         <!--  Radio buttons to change layout of heatmap based either on market cap of sectror size  -->
-        <form>
+
+<div id="buttons">
+    <label>Select View Option:</label>
+    <hr>
+       <div id="marketButton">
             <label><input type="radio" name="mode" value="sumBySize" checked> Market Cap</label>
+        </div>
+        <div id="sizeButton">
             <label><input type="radio" name="mode" value="sumByCount"> Sector Size</label>
-        </form>
+        </div>
+    </div>
+
     </div>
     <div class="row">
         <svg width="960" height="570"></svg>
@@ -34,8 +42,8 @@ November 2018
 </div>
 <script type="text/javascript">
 
-    var width = 600;
-    var height = 600;
+    var width = 960;
+    var height = 570;
     var svg = d3.select("svg")
         .attr("width",width)
         .attr("height",height);
@@ -94,9 +102,10 @@ November 2018
             .selectAll("tspan")
             .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); }) // splits names based on capital letter for new word
             .enter().append("tspan")
-            .attr("x", 4)
-            .attr("y", function(d, i) { return 13 + i * 10; }) // arrange position in cell correctly
-            .text(function(d) { return d; });
+            .attr("x", 5)                                       // arrange  text position in cell correctly
+            .style("font-size", "15px")                         // enlarge font of company name
+            .attr("y", function(d, i) { return 25 + i * 15; })  // arrange text position in cell correctly
+            .text(function(d) { return d; });                   // print text to cell
         // Simple way to make tooltips
         cell.append("title")
             .text(function(d) { return d.data.id + "\n" + format(d.value); });

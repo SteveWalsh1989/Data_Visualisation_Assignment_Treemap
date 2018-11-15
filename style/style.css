@@ -3,13 +3,26 @@ svg {
     margin-right: auto;
     display: block;
     font: 10px sans-serif;
+    float:left;
+
 }
 
-form {
+#buttons{
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	float:right;
+	float: right;
+    padding-top: 30px;
+    padding-right: 80px;
+    text-decoration: none;
 }
+#marketButton{
+   z-index: 1;
 
+}
+#sizeButton{
+    margin-top: 10px;
+    z-index: 2;
+
+}
 label {
     padding-right:10px;
 }
@@ -17,3 +30,5 @@ label {
 input {
     margin: 0 7px;
 }
+
+

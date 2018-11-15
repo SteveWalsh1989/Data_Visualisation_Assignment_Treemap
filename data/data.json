@@ -1,0 +1,73 @@
+[{
+
+	"type" : "Technology",
+	"children": [ 
+		{
+			"name" : "Apple",
+			"ticker": "AAPL",
+			"value" : 204.47,
+			"changePrice":  -4.02,
+			"changePercent": -1.93,
+			"size": 972
+		},
+		{
+			"name" : "Microsoft",
+			"ticker": "MSFT",
+			"value" : 109.57,
+			"changePrice":  -2.18,
+			"changePercent": -1.95,
+			"size": 849
+		},
+		{
+			"name" : "International Business Machines Corporation",
+			"ticker": "IBM",
+			"value" : 123.54,
+			"changePrice": 0.16,
+			"changePercent": 0.13,
+			"size": 112
+		}
+	]
+},
+{
+	"type" : "Finance",
+	"children": [ 
+		{
+			"name" : "Wells Fargo",
+			"ticker": "WFC",
+			"value" : 54.01,
+			"changePrice":  -0.12,
+			"changePercent": -0.13,
+			"marketCap": 249
+		},
+		{
+			"name" : "JP Morgan Chase",
+			"ticker": "JPM",
+			"value" : 1123,
+			"changePrice":  -2.18,
+			"changePercent": -1.95,
+			"marketCap": 370
+		}
+	]
+}, 
+{
+	"type" : "Mixed",
+	"children" : [ 
+		{
+			"name" : "Walt Disney Company",
+			"ticker": "DIS",
+			"value" : 118,
+			"changePrice":  -4.02,
+			"changePercent": -1.93,
+			"marketCap": 175
+		},
+		{
+			"name" : "Boston Scientific",
+			"ticker": "BSX",
+			"value" : 338,
+			"changePrice":  1.38,
+			"changePercent": 2.34,
+			"marketCap": 53
+		}
+	]
+}
+]

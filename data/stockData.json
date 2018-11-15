@@ -1,0 +1,102 @@
+{
+ "name": "US-Stocks",
+ "children": [
+  {
+   "name": "Technology",
+   "children": [
+    {
+     "name": "Computers",
+     "children": [
+      {
+        "name": "Apple",
+        "size": 1008
+      },
+      {
+        "name": "dell",
+        "size": 232
+      },
+      {
+        "name": "lenovo",
+        "size": 112
+      },
+      {
+        "name": "Microsoft",
+        "size": 455
+      }
+     ]
+    },
+     {
+       "name": "Software",
+       "children": [
+         {
+           "name": "Adobe",
+           "size": 456
+         },
+         {
+           "name": "Jetbrains",
+           "size": 150
+         },
+         {
+           "name": "Alphabet",
+           "size": 922
+         }
+       ]
+     },
+    {
+     "name": "phones",
+     "children": [
+      {
+        "name": "HTC",
+        "size": 102
+      },
+      {
+        "name": "Nokia",
+        "size": 84
+      },
+      {
+        "name": "OnePlus",
+        "size": 100
+      },
+      {
+        "name": "Xaoimi",
+        "size": 343
+      }
+     ]
+    },
+    {
+     "name": "TV",
+     "children": [
+      {"name": "sony", "size": 322},
+      {"name": "Panasonic", "size": 123},
+      {"name": "Samsung", "size": 675}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Finance",
+   "children": [
+    {
+      "name": "jp Morgan",
+      "size": 432
+    },
+    {
+      "name": "Berkshire Hathaway",
+      "size": 789
+    },
+    {
+      "name": "Morgan Stanley",
+      "size": 234
+    },
+    {
+      "name": "Bank of America",
+      "size": 532
+    },
+    {
+      "name": "Scottrade",
+      "size": 211
+    }
+   ]
+  }
+ ]
+}

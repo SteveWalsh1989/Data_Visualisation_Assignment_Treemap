@@ -8,7 +8,7 @@
 			"value" : 204.47,
 			"changePrice":  -4.02,
 			"changePercent": -1.93,
-			"size": 972
+			"marketCap": 972
 		},
 		{
 			"name" : "Microsoft",
@@ -16,7 +16,7 @@
 			"value" : 109.57,
 			"changePrice":  -2.18,
 			"changePercent": -1.95,
-			"size": 849
+			"marketCap": 849
 		},
 		{
 			"name" : "International Business Machines Corporation",
@@ -24,7 +24,7 @@
 			"value" : 123.54,
 			"changePrice": 0.16,
 			"changePercent": 0.13,
-			"size": 112
+			"marketCap": 112
 		}
 	]
 },

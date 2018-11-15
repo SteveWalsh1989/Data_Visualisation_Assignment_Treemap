@@ -28,7 +28,7 @@ November 2018
     <label>Select View Option:</label>
     <hr>
        <div id="marketButton">
-            <label><input type="radio" name="mode" value="sumBySize" checked> Market Cap</label>
+            <label><input type="radio" name="mode" value="sortByMarketCap" checked> Market Cap</label>
         </div>
         <div id="sizeButton">
             <label><input type="radio" name="mode" value="sumByCount"> Sector Size</label>
@@ -61,19 +61,21 @@ November 2018
 
 
     d3.json("data/stockData.json").then( function( data) {
-        //test - print data to console
-        console.log(data);
-        console.log(d3.hierarchy(data));
+
 
 
         // Since we are dealing with hierarchical data, need to convert the data to the right format
         var root = d3.hierarchy(data)
             .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
-            .sum(sumBySize)
+            .sum(sortByMarketCap)
             .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
 
-        //test - print data to console
-        console.log(treemap(root).leaves());
+        // storing array of all companies -
+        // todo: add change percent values,
+        // todo: loop through array adding values
+        // todo: use new array to craete color gradient
+        var items = treemap(root).leaves();
+        console.log(items);
         // calcs x0, x1, y0, and y1 for each node to show where the rectangles should be in the layout
         treemap(root);
 
@@ -112,7 +114,7 @@ November 2018
 
         // event listener for the radio buttons to select between different summing methods
         d3.selectAll("input")
-            .data([sumBySize, sumByCount], function(d) { return d ? d.name : this.value; })
+            .data([sortByMarketCap, sumByCount], function(d) { return d ? d.name : this.value; })
             .on("change", changed);
         function changed(sum) {
             // Give the treemap a new root, which uses a different summing function
@@ -130,8 +132,8 @@ November 2018
         return d.children ? 0 : 1;
     }
     // Return the size of the node
-    function sumBySize(d) {
-        return d.size;
+    function sortByMarketCap(d) {
+        return d.marketCap;
     }
 
 </script>

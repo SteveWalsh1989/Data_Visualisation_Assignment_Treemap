@@ -9,19 +9,23 @@
      "children": [
       {
         "name": "Apple",
-        "size": 1008
+        "ticker": "AAPL",
+        "value" : 204.47,
+        "changePrice":  -4.02,
+        "changePercent": -1.93,
+        "marketCap": 1008
       },
       {
         "name": "dell",
-        "size": 232
+        "marketCap": 232
       },
       {
         "name": "lenovo",
-        "size": 112
+        "marketCap": 112
       },
       {
         "name": "Microsoft",
-        "size": 455
+        "marketCap": 455
       }
      ]
     },
@@ -30,45 +34,47 @@
        "children": [
          {
            "name": "Adobe",
-           "size": 456
+           "marketCap": 456
          },
          {
            "name": "Jetbrains",
-           "size": 150
+           "marketCap": 150
          },
          {
            "name": "Alphabet",
-           "size": 922
+           "marketCap": 922
          }
        ]
      },
     {
      "name": "phones",
-     "children": [
+     "marketCap": [
       {
         "name": "HTC",
-        "size": 102
+        "marketCap": 102
       },
       {
         "name": "Nokia",
-        "size": 84
+        "marketCap": 84
       },
       {
         "name": "OnePlus",
-        "size": 100
+        "marketCap": 100
       },
       {
         "name": "Xaoimi",
-        "size": 343
+        "marketCap": 343
       }
      ]
     },
     {
      "name": "TV",
      "children": [
-      {"name": "sony", "size": 322},
-      {"name": "Panasonic", "size": 123},
-      {"name": "Samsung", "size": 675}
+      {"name": "sony", "marketCap": 322},
+      {"name": "Panasonic", "marketCap": 123},
+      {"name": "Samsung", "marketCap": 675},
+      {"name": "Lg", "marketCap": 98}
+
      ]
     }
    ]
@@ -78,23 +84,23 @@
    "children": [
     {
       "name": "jp Morgan",
-      "size": 432
+      "marketCap": 432
     },
     {
       "name": "Berkshire Hathaway",
-      "size": 789
+      "marketCap": 789
     },
     {
       "name": "Morgan Stanley",
-      "size": 234
+      "marketCap": 234
     },
     {
       "name": "Bank of America",
-      "size": 532
+      "marketCap": 532
     },
     {
       "name": "Scottrade",
-      "size": 211
+      "marketCap": 211
     }
    ]
   }

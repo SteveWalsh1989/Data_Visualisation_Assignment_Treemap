@@ -188,5 +188,162 @@
     }
    ]
   }
+   ,
+   {
+     "name": "Commodities",
+     "children": [
+       {
+         "name": "OIL",
+         "ticker": "OIL",
+         "value" : 43.47,
+         "changePrice":  -1.02,
+         "changePercent": 1.93,
+         "marketCap": 9
+       },
+       {
+         "name": "Sugar",
+         "ticker": "SGR",
+         "value" : 21.57,
+         "changePrice":  2.98,
+         "changePercent": 1.93,
+         "marketCap": 12
+       },
+       {
+         "name": "Gold",
+         "ticker": "MST",
+         "value" : 12.47,
+         "changePrice":  3.2,
+         "changePercent": 1.53,
+         "marketCap": 22
+       },
+       {
+         "name": "Silver",
+         "ticker": "SLV",
+         "value" : 674.6,
+         "changePrice":  -4.02,
+         "changePercent": -6.33,
+         "marketCap": 34
+       },
+       {
+         "name": "Steel",
+         "ticker": "STL",
+         "value" : 91.47,
+         "changePrice":  6.56,
+         "changePercent": 8.25,
+         "marketCap": 24
+       }
+     ]
+   }
+,
+   {
+     "name": "Health Care",
+     "children": [
+       {
+         "name": "Natera",
+         "ticker": "NTA",
+         "value" : 24.47,
+         "changePrice":  4.02,
+         "changePercent": 1.93,
+         "marketCap": 42
+       },
+       {
+         "name": "Abiomed",
+         "ticker": "AB<",
+         "value" : 54.47,
+         "changePrice":  2.62,
+         "changePercent": 3.53,
+         "marketCap": 67
+       },
+       {
+         "name": "TrustHealth",
+         "ticker": "THS",
+         "value" : 74.47,
+         "changePrice":  -3.92,
+         "changePercent": -1.93,
+         "marketCap": 76
+       },
+       {
+         "name": "Health Inc",
+         "ticker": "BOA",
+         "value" : 45.47,
+         "changePrice":  -1.02,
+         "changePercent": -2.33,
+         "marketCap": 67
+       }
+     ]
+   }
+, {
+     "name": "Communications",
+     "children": [
+       {
+         "name": "Verizon",
+         "ticker": "VRZ",
+         "value" : 204.47,
+         "changePrice":  -4.02,
+         "changePercent": -1.93,
+         "marketCap": 98
+       },
+       {
+         "name": "Vodafone",
+         "ticker": "VFN",
+         "value" : 153.47,
+         "changePrice":  3.02,
+         "changePercent": 2.93,
+         "marketCap": 87
+       },
+       {
+         "name": "02",
+         "ticker": "OTW",
+         "value" : 53.57,
+         "changePrice":  3.42,
+         "changePercent": 1.43,
+         "marketCap": 27
+       },
+       {
+         "name": "Meteor",
+         "ticker": "MTR",
+         "value" : 13.47,
+         "changePrice":  -1.02,
+         "changePercent": -2.93,
+         "marketCap": 54
+       },
+       {
+         "name": "Tesco",
+         "ticker": "TSP",
+         "value" : 153.32,
+         "changePrice":  5.76,
+         "changePercent": 3.93,
+         "marketCap": 86
+       },
+       {
+         "name": "Three",
+         "ticker": "TRE",
+         "value" : 204.47,
+         "changePrice":  -1.32,
+         "changePercent": -2.56,
+         "marketCap": 56
+       },
+       {
+         "name": "AT&T",
+         "ticker": "ATT",
+         "value" : 43.47,
+         "changePrice":  3.02,
+         "changePercent": 8.33,
+         "marketCap": 76
+       },
+       {
+         "name": "FreeCell",
+         "ticker": "FRC",
+         "value" : 12.47,
+         "changePrice":  -0.56,
+         "changePercent": -2.25,
+         "marketCap": 34
+       }
+     ]
+   }
+
+
+
+
  ]
 }

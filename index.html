@@ -79,12 +79,12 @@ November 2018
         var companyData = d3.tip()
             .attr("class", "d3-tip")
             .html(function (d){
-                var text = "<strong> Company:</strong> <span style='color:#dddfdd'>" + d.data.name + "</span><br><br>";
-                text += "<strong> Ticker:</strong> <span style='color:#dddfdd;text-transform:capitalize'>" + d.data.ticker + "</span><br><br>";
-                text += "<strong> Current Value:</strong> <span style='color:#dddfdd'>" + d3.format(".2f")(d.data.value) + "</span><br><br>";
-                text += "<strong> Change Price:</strong> <span style='color:#dddfdd'>" + d3.format(".2f")(d.data.changePrice) + "</span><br><br>";
-                text += "<strong> Change Percentage:</strong> <span style='color:#dddfdd'>" + d3.format(".2f")(d.data.changePercent) + "</span><br><br>";
-                text += "<strong> Market Capital:</strong> <span style='color:#dddfdd'>" + d3.format(",.0f")(d.data.marketCap) + "</span><br><br>";
+                var text = "<strong> Company:          </strong> <span style='color:#dddfdd'>" + d.data.name                            + "</span><br><br>";
+                text += "   <strong> Ticker:           </strong> <span style='color:#dddfdd'>" + d.data.ticker                          + "</span><br><br>";
+                text += "   <strong> Current Value:    </strong> <span style='color:#dddfdd'>" + d3.format(".2f")(d.data.value)         + "</span><br><br>";
+                text += "   <strong> Change Price:     </strong> <span style='color:#dddfdd'>" + d3.format(".2f")(d.data.changePrice)   + "</span><br><br>";
+                text += "   <strong> Change Percentage:</strong> <span style='color:#dddfdd'>" + d3.format(".2f")(d.data.changePercent) + "</span><br><br>";
+                text += "   <strong> Market Capital:   </strong> <span style='color:#dddfdd'>" + d3.format(",.0f")(d.data.marketCap)    + "</span><br><br>";
                 return text;
 
             });

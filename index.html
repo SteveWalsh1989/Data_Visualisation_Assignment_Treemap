@@ -13,12 +13,20 @@ November 2018
 <head>
     <meta charset="UTF-8">
     <title>R00151053: Heatmap</title>
+    <!-- Import D3.JS Framwork-->
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Import D3.JS Tip-->
+    <script src="script/d3-tip.js"></script>
+
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-
+<div class="heading">
+    <h1 id="title">Interactive Data Visualisation Assignment 2</h1>
+    <h2 id="heading">Stock Market Heatmap</h2>
+</div>
 <nav class="navbar navbar-default"></nav>
 <div class="container">
     <div class="row">
@@ -37,13 +45,13 @@ November 2018
 
     </div>
     <div class="row">
-        <svg width="960" height="570"></svg>
+        <svg width="960" height="500"></svg>
     </div>
 </div>
 <script type="text/javascript">
 
     var width  = 960;
-    var height = 570;
+    var height = 500;
     var svg = d3.select("svg")
         .attr("width",width)
         .attr("height",height);
@@ -65,6 +73,24 @@ November 2018
             .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; }) // adds unique ID to each company
             .sum(sortByMarketCap)
             .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+
+
+        // creating tooltip with company data
+        var companyData = d3.tip()
+            .attr("class", "d3-tip")
+            .html(function (d){
+                var text = "<strong> Company:</strong> <span style='color:#dddfdd'>" + d.data.name + "</span><br><br>";
+                text += "<strong> Ticker:</strong> <span style='color:#dddfdd;text-transform:capitalize'>" + d.data.ticker + "</span><br><br>";
+                text += "<strong> Current Value:</strong> <span style='color:#dddfdd'>" + d3.format(".2f")(d.data.value) + "</span><br><br>";
+                text += "<strong> Change Price:</strong> <span style='color:#dddfdd'>" + d3.format(".2f")(d.data.changePrice) + "</span><br><br>";
+                text += "<strong> Change Percentage:</strong> <span style='color:#dddfdd'>" + d3.format(".2f")(d.data.changePercent) + "</span><br><br>";
+                text += "<strong> Market Capital:</strong> <span style='color:#dddfdd'>" + d3.format(",.0f")(d.data.marketCap) + "</span><br><br>";
+                return text;
+
+            });
+        // add tooltip to main svg
+        svg.call(companyData);
+
 
         // storing array of all companies -
         var items = treemap(root).leaves();
@@ -103,7 +129,9 @@ November 2018
                 }else  if(d.data.changePercent <= -3 ) {
                     return "#ec3a3f";               // return red if loss
                 }
-            }); // takes color of parent
+            })
+            .on("mouseover", companyData.show)
+            .on("mouseout", companyData.hide); // takes color of parent
 
 
         // Make sure that text labels don't overflow into adjacent boxes by making them stick to the rectangle
